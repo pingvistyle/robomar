@@ -33,5 +33,18 @@ describe Robot do
     expect(Robot.new(p, 1, 1, :S).move.state).to eq([1, 0, :S])
     expect(Robot.new(p, 1, 1, :W).move.state).to eq([0, 1, :W])
   end
+
+  it 'Outside' do
+    p = Plateau.new(6,6)
+    expect{Robot.new(p, 7, 1, :N)}.to raise_error("Robot outside plateau!")
+    expect{Robot.new(p, 1, 5, :N).move.move}.to raise_error("Robot outside plateau!")
+  end
+
+  it 'Programming' do
+    p = Plateau.new(6,6)
+    expect(Robot.new(p, 1, 1, :N).programming("MMM").state).to eq([1, 4, :N])
+    expect(Robot.new(p, 1, 1, :N).programming("MMMRMMMLMMLL").state).to eq([4, 6, :S])
+  end
+
 end
   

@@ -56,5 +56,6 @@ class Robot
     commands.each_char do |c|
       self.send COMMANDS[c.to_sym]
     end
+    self
   end
 end
