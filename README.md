@@ -2,7 +2,7 @@
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/robomar`. To experiment with that code, run `bin/console` for an interactive prompt.
 
-TODO: Delete this and the text above, and describe your gem
+For fun: Gem implementation logics for moving robots on plateau of Mars
 
 ## Installation
 
@@ -22,7 +22,25 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+step 1:
+Create file with instructions for robots.
+Example containing of file instruction_file.txt:
+----------------------
+6 6
+
+3 3 N 
+RRMLMRRML
+0 0 E
+RRMMLMRMM
+----------------------
+
+step 2:
+run command in terminal
+>robomar instruction_file.txt
+
+Results: 
+3 2 S 
+4 1 W
 
 ## Development
 
@@ -32,7 +50,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/robomar.
+Bug reports and pull requests are welcome on GitHub at https://github.com/pingvistyle/robomar.
 
 
 ## License
