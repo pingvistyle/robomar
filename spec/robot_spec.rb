@@ -4,15 +4,15 @@ describe Robot do
     expect(Robot.new(1, 1, :N).state).to eq([1, 1, :N])
   end
 
-  it 'Check raise error if set correction args' do
+  it 'Check raise error if set incorrection args' do
     expect{Robot.new(1, 1)}.to raise_error(ArgumentError)
   end
 
-  it 'Check raise error if set correction position' do
+  it 'Check raise error if set incorrection position' do
     expect{Robot.new(-1, 1, :N)}.to raise_error("Incorrection position!")
   end
 
-  it 'Check raise error if set correction side' do
+  it 'Check raise error if set incorrection side' do
     expect{Robot.new(1, 1, :ASDF)}.to raise_error("Incorrection side!")
   end
 

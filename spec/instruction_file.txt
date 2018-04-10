@@ -1,0 +1,7 @@
+6 6
+
+3 3 N
+RRMLMRRML
+
+0 0 E
+RRMMLMRMM
