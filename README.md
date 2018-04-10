@@ -25,11 +25,16 @@ Or install it yourself as:
 step 1:
 Create file with instructions for robots.
 Example containing of file instruction_file.txt:
+
 6 6
 
+
 3 3 N 
+
 RRMLMRRML
+
 0 0 E
+
 RRMMLMRMM
 
 step 2:
@@ -37,7 +42,9 @@ run command in terminal
 >robomar instruction_file.txt
 
 Results: 
-3 2 S 
+
+3 2 S
+
 4 1 W
 
 ## Development
