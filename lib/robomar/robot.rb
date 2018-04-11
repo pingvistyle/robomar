@@ -15,8 +15,9 @@ class Robot
     raise "Robot outside plateau!" if outside?
   end
 
+private
   def outside?
-    @x > @plateau.x || @y > @plateau.y
+    @x < 0 || @y < 0 || @x > @plateau.x || @y > @plateau.y
   end
 
   def right
@@ -47,6 +48,7 @@ class Robot
     self
   end
 
+public
   def state
     [@x,@y,@side]
   end

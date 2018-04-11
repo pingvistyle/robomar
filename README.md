@@ -33,19 +33,21 @@ Example containing of file instruction_file.txt:
 
 RRMLMRRML
 
-0 0 E
+6 6 E
 
 RRMMLMRMM
 
 step 2:
-run command in terminal
->robomar instruction_file.txt
+Run ruby script:
+require "rubygems"
+require "robomar"
+p Robomar.run("/path_to_file/instruction_file.txt")
 
 Results: 
 
 3 2 S
 
-4 1 W
+2 5 W
 
 ## Development
 

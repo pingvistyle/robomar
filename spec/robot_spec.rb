@@ -22,22 +22,22 @@ describe Robot do
 
   it 'Turn right/left' do
     p = Plateau.new(6,6)
-    expect(Robot.new(p, 1, 1, :N).right.state).to eq([1, 1, :E])
-    expect(Robot.new(p, 1, 1, :N).left.state).to eq([1, 1, :W])
+    expect(Robot.new(p, 1, 1, :N).programming('R').state).to eq([1, 1, :E])
+    expect(Robot.new(p, 1, 1, :N).programming('L').state).to eq([1, 1, :W])
   end
 
   it 'Move' do
     p = Plateau.new(6,6)
-    expect(Robot.new(p, 1, 1, :N).move.state).to eq([1, 2, :N])
-    expect(Robot.new(p, 1, 1, :E).move.state).to eq([2, 1, :E])
-    expect(Robot.new(p, 1, 1, :S).move.state).to eq([1, 0, :S])
-    expect(Robot.new(p, 1, 1, :W).move.state).to eq([0, 1, :W])
+    expect(Robot.new(p, 1, 1, :N).programming('M').state).to eq([1, 2, :N])
+    expect(Robot.new(p, 1, 1, :E).programming('M').state).to eq([2, 1, :E])
+    expect(Robot.new(p, 1, 1, :S).programming('M').state).to eq([1, 0, :S])
+    expect(Robot.new(p, 1, 1, :W).programming('M').state).to eq([0, 1, :W])
   end
 
   it 'Outside' do
     p = Plateau.new(6,6)
     expect{Robot.new(p, 7, 1, :N)}.to raise_error("Robot outside plateau!")
-    expect{Robot.new(p, 1, 5, :N).move.move}.to raise_error("Robot outside plateau!")
+    expect{Robot.new(p, 1, 5, :N).programming('MM')}.to raise_error("Robot outside plateau!")
   end
 
   it 'Programming' do
