@@ -17,7 +17,7 @@ describe Robomar do
   end
 
   it 'Run' do
-    expect(Robomar.run("./spec/instruction_file.txt")).to eq([[3, 2, :S], [2, 5, :W]])
+    expect(Robomar.run("./spec/instruction_file.txt")).to eq("3 2 S\n2 5 W")
   end
 end
 

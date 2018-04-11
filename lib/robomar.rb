@@ -27,7 +27,7 @@ public
       end
     end
 
-    robots_states
+    robots_states.map{|row| row.join(" ")}.join("\n")
   end
 
 private
