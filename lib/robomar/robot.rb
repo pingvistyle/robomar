@@ -22,18 +22,14 @@ private
 
   def right
     i = SIDE.index(@side)
-    # TODO add lambda
     i = (i < SIDE.length - 1) ? i + 1 : 0
     @side = SIDE[i]
-    self
   end
 
   def left
     i = SIDE.index(@side)
-    # TODO add lambda
     i = (i > 0) ? i - 1 : SIDE.length - 1
     @side = SIDE[i]
-    self
   end
 
   def move
@@ -45,7 +41,6 @@ private
     end
 
     raise "Robot outside plateau!" if outside?
-    self
   end
 
 public
