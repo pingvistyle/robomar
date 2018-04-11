@@ -19,11 +19,9 @@ public
       next if l.empty?
 
       if isRobot
-        p "create_robot=#{l}"
         isRobot = !isRobot
         robot = create_robot(plateau, l)
       else
-        p "programming=#{l}"
         isRobot = !isRobot
         robots_states << robot.programming(l).state
       end
