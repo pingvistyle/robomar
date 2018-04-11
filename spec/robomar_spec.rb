@@ -13,7 +13,7 @@ describe Robomar do
   it 'Create robot' do
     p = Robomar.create_plateau("6 6")
     expect(Robomar.create_robot(p, "1 1 N").state).to eq([1, 1, :N])
-    expect{Robomar.create_robot(p, " 7   1 N\n")}.to raise_error("Robot outside plateau!")
+    expect{Robomar.create_robot(p, " 7   1 N\n")}.to raise_error("Robot outarea plateau!")
   end
 
   it 'Run' do

@@ -15,9 +15,9 @@ describe Robot do
     expect{Robot.new(p, -1, 1, :N)}.to raise_error("Incorrection position!")
   end
 
-  it 'Check raise error if set incorrection side' do
+  it 'Check raise error if set incorrection direction' do
     Plateau.new(6,6)
-    expect{Robot.new(p, 1, 1, :ASDF)}.to raise_error("Incorrection side!")
+    expect{Robot.new(p, 1, 1, :ASDF)}.to raise_error("Incorrection direction!")
   end
 
   it 'Turn right/left' do
@@ -34,10 +34,10 @@ describe Robot do
     expect(Robot.new(p, 1, 1, :W).programming('M').state).to eq([0, 1, :W])
   end
 
-  it 'Outside' do
+  it 'Outarea' do
     p = Plateau.new(6,6)
-    expect{Robot.new(p, 7, 1, :N)}.to raise_error("Robot outside plateau!")
-    expect{Robot.new(p, 1, 5, :N).programming('MM')}.to raise_error("Robot outside plateau!")
+    expect{Robot.new(p, 7, 1, :N)}.to raise_error("Robot outarea plateau!")
+    expect{Robot.new(p, 1, 5, :N).programming('MM')}.to raise_error("Robot outarea plateau!")
   end
 
   it 'Programming' do

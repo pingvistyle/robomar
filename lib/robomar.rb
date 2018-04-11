@@ -39,9 +39,9 @@ private
   end
 
   def self.create_robot(plateau, str)
-    v = /\s*(?<x>\d+)\s*(?<y>\d+)\s*(?<side>[NESW])\s*/.match(str)
-    raise "Size for plateeau not set!" if [v, v[:x], v[:y], v[:side]].any? &:nil?
-    Robot.new(plateau, v[:x].to_i, v[:y].to_i, v[:side].to_sym)
+    v = /\s*(?<x>\d+)\s*(?<y>\d+)\s*(?<direction>[NESW])\s*/.match(str)
+    raise "Size for plateeau not set!" if [v, v[:x], v[:y], v[:direction]].any? &:nil?
+    Robot.new(plateau, v[:x].to_i, v[:y].to_i, v[:direction].to_sym)
   end
   
 end
