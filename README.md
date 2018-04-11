@@ -25,30 +25,29 @@ Or install it yourself as:
 step 1:
 Create file with instructions for robots.
 Example containing of file instruction_file.txt:
-
+```
 6 6
 
-
-3 3 N 
-
+3 3 N
 RRMLMRRML
 
 6 6 E
-
 RRMMLMRMM
+```
 
 step 2:
+
 Run ruby script:
+```
 require "rubygems"
 require "robomar"
 p Robomar.run("/path_to_file/instruction_file.txt")
-
+```
 Results: 
-
+```
 3 2 S
-
 2 5 W
-
+```
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
