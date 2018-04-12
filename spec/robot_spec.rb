@@ -6,17 +6,17 @@ describe Robot do
   end
 
   it 'Check raise error if set incorrection args' do
-    Plateau.new(6,6)
+    p = Plateau.new(6,6)
     expect{Robot.new(p, 1, 1)}.to raise_error(ArgumentError)
   end
 
   it 'Check raise error if set incorrection position' do
-    Plateau.new(6,6)
+    p = Plateau.new(6,6)
     expect{Robot.new(p, -1, 1, :N)}.to raise_error("Incorrection position!")
   end
 
   it 'Check raise error if set incorrection direction' do
-    Plateau.new(6,6)
+    p = Plateau.new(6,6)
     expect{Robot.new(p, 1, 1, :ASDF)}.to raise_error("Incorrection direction!")
   end
 
