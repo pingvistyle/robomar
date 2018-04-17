@@ -1,6 +1,7 @@
 require "robomar/version"
 require "robomar/plateau"
 require "robomar/robot"
+require "robomar/errors"
 
 module Robomar
 
